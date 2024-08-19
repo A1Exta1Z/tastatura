@@ -27,7 +27,7 @@ updateTextContent();
 
 let currentIndex = 0;
 
-function getTimestamp() {
+const getTimestamp = () => {
     return Math.floor(Date.now() / 1000);
 }
 
@@ -68,7 +68,7 @@ document.addEventListener("keyup", event => {
     }
 });
 
-function targetNextKey() {
+const targetNextKey = () => {
     const nextChar = currentText[currentIndex].toUpperCase();
     const keyElement = document.getElementById(nextChar);
     if (keyElement) {
